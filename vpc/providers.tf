@@ -18,3 +18,16 @@ terraform {
     encrypt = "true"
   }
 }
+
+terraform {
+  required_providers {
+    template = {
+      source = "hashicorp/template"
+      version = "2.2.0"
+    }
+  }
+}
+
+provider "template" {
+  # Configuration options
+}
