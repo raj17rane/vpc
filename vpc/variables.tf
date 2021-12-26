@@ -1,22 +1,22 @@
 variable "environment" {
-  type    = "string"
+  type    = string
   default = "test"
 }
 
 variable "region" {
-  type = "string"
+  type = string
 }
 
 variable "availability_zones" {
-  type = "list"
+  type = list(string)
 }
 
 variable "bastion_instance_type" {
-  type = "string"
+  type = string
 }
 
 variable "cidr_block" {
-  type        = "string"
+  type        = string
   description = "VPC cidr block. Example: 10.0.0.0/16"
 }
 

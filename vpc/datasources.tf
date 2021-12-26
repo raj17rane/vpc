@@ -1,10 +1,11 @@
 data "template_file" "bastion_public_key" {
-  template = "${file("~/.ssh/id_rsa.pub")}"
+  template = file("~/.ssh/id_rsa.pub")
 }
 
 # AWS
 data "aws_ami" "amazon_linux" {
   most_recent = true
+  owners = ["amazon"]
 
   filter {
     name   = "name"

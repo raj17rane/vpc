@@ -1,7 +1,7 @@
 provider "aws" {
-  region = "${var.region}"
+  region = var.region
 
-  
+
 }
 
 #provider "template" {
@@ -22,7 +22,7 @@ terraform {
 terraform {
   required_providers {
     template = {
-      source = "hashicorp/template"
+      source  = "hashicorp/template"
       version = "2.2.0"
     }
   }
